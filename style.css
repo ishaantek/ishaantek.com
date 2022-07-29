@@ -12,11 +12,6 @@ a {
   /* no underline */
 }
 
-.fa-5x {
-  color: #7ad0ac;
-  margin: 18px;
-}
-
 html,
 body {
   font-family: "Montserrat", sans-serif;
@@ -53,6 +48,7 @@ svg {
   --color-blue: var(--color-blue-light);
   --color-green: var(--color-green-light);
   --color-blue: var(--color-blue-light);
+  --icons: var(--color-green-light);
 }
 
 .dark-theme {
@@ -61,6 +57,7 @@ svg {
   --color-blue: var(--color-text-dark);
   --color-green: var(--color-text-dark);
   --color-blue: var(--color-text-dark);
+  --icons: var(--color-text-dark);
 }
 
 /* Experience --------------------------------------------- */
@@ -437,6 +434,11 @@ svg {
 
 .blue-background {
   background-color: var(--color-blue);
+}
+
+.fa-5x {
+  color: var(--icons);
+  margin: 18px;
 }
 
 .green-text {
