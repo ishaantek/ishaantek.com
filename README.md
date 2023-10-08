@@ -9,8 +9,6 @@ The most powerful portfolio built with three.js ☄️
 
 With this portfolio you can showcase your skills like a pro. Give details about you, show off your projects, and add your own contact me section all in an interactive website.
 
-Made by [Andrew Woan](https://www.linkedin.com/in/AndrewWoan) and modified by [Ishaan Garg](https://twitter.com/ishaantek)
-
 [comment]: <> (Product Hunt)
 
 ## Table of contents
