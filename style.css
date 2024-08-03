@@ -35,6 +35,7 @@ svg {
   --color-background-light: #faf4e5;
   --color-pink-light: #e5a1aa;
   --color-green-light: #7ad0ac;
+  --color-green-dark: #5fa38f;
   --color-blue-light: #9ebbe7;
 
   /* Dark Theme Variables */
@@ -49,6 +50,7 @@ svg {
   --color-green: var(--color-green-light);
   --color-blue: var(--color-blue-light);
   --icons: var(--color-green-light);
+  --download-button: var(--color-green-dark);
 }
 
 .dark-theme {
@@ -58,6 +60,7 @@ svg {
   --color-green: var(--color-text-dark);
   --color-blue: var(--color-text-dark);
   --icons: var(--color-text-dark);
+  --download-button: var(--color-text-dark);
 }
 
 /* Experience --------------------------------------------- */
@@ -324,7 +327,7 @@ svg {
 }
 
 .section-heading {
-  font-size: 32px;
+  font-size: 28px;
   font-weight: 700;
   line-height: 1.8;
   margin-top: 1px;
@@ -332,6 +335,7 @@ svg {
 }
 
 .section-text {
+  text-align: center;
   line-height: 2;
   margin-top: 18px;
   font-size: 16px;
@@ -451,7 +455,7 @@ svg {
 
 .fa-5x {
   color: var(--icons);
-  margin: 18px;
+  margin: 12px;
 }
 
 .green-text {
@@ -509,19 +513,53 @@ svg {
 }
 
 .social-media-icons {
-  display: flex;
-  justify-content: center;
-  gap: 20px; 
-  margin-bottom: 20px; 
+  display: grid;
+  grid-template-columns: repeat(6, auto);
+  gap: 20px;
+  margin-bottom: 20px;
+  justify-items: center;
+}
+
+.social-media-icons a {
+  color: var(--icons);
+  transition: transform 0.3s ease;
+}
+
+.social-media-icons a i {
+  font-size: 5em;
+}
+
+.social-media-icons a:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 1024px) {
+  .social-media-icons {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .social-media-icons {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .social-media-icons {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
 }
 
 .download-button {
   display: inline-block;
   padding: 15px 30px; 
   font-size: 22px; 
-  color: white;
-  background-color: #5fa38f; 
-  border: 2px solid #5fa38f;
+  color: black;
+  background-color: var(--download-button);; 
+  border: 2px solid var(--download-button);;
   border-radius: 50px; 
   text-align: center;
   text-decoration: none;
@@ -531,8 +569,9 @@ svg {
 }
 
 .download-button:hover {
-  color: white;
-  box-shadow: 0 0 10px #5fa38f, 0 0 20px #5fa38f, 0 0 30px #5fa38f;
+  color: black;
+  font-weight: 600;
+  box-shadow: 0 0 10px var(--download-button), 0 0 20px var(--download-button), 0 0 30px var(--download-button);
 }
 
 .download-button::before {
@@ -542,7 +581,7 @@ svg {
   left: -50%;
   width: 200%;
   height: 200%;
-  background: linear-gradient(45deg, transparent, #5fa38f, transparent);
+  background: linear-gradient(45deg, transparent, var(--download-button), transparent);
   transition: all 0.3s ease;
   opacity: 0.3; 
 }
@@ -558,12 +597,12 @@ svg {
 
 @keyframes glow {
   0% {
-    box-shadow: 0 0 5px #5fa38f, 0 0 10px #5fa38f, 0 0 15px #5fa38f, 0 0 20px #5fa38f, 0 0 25px #5fa38f;
+    box-shadow: 0 0 5px var(--download-button), 0 0 10px var(--download-button), 0 0 15px var(--download-button), 0 0 20px var(--download-button), 0 0 25px var(--download-button);
   }
   50% {
-    box-shadow: 0 0 10px #5fa38f, 0 0 20px #5fa38f, 0 0 30px #5fa38f, 0 0 40px #5fa38f, 0 0 50px #5fa38f;
+    box-shadow: 0 0 10px #5fa38f, 0 0 20px var(--download-button), 0 0 30px var(--download-button), 0 0 40px var(--download-button), 0 0 50px var(--download-button);
   }
   100% {
-    box-shadow: 0 0 5px #5fa38f, 0 0 10px #5fa38f, 0 0 15px #5fa38f, 0 0 20px #5fa38f, 0 0 25px #5fa38f;
+    box-shadow: 0 0 5px var(--download-button), 0 0 10px var(--download-button), 0 0 15px var(--download-button), 0 0 20px var(--download-button), 0 0 25px var(--download-button);
   }
 }
