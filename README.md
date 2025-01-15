@@ -3,27 +3,9 @@
 ![Preview](preview.jpg)
 <br>
 <br>
-The most powerful portfolio built with three.js ☄️
+My personal portfolio built with three.js ☄️
 
 👉 Check out the [live demo](https://www.ishaantek.com/)
-
-With this portfolio you can showcase your skills like a pro. Give details about you, show off your projects, and add your own contact me section all in an interactive website.
-
-[comment]: <> (Product Hunt)
-
-## Table of contents
-- [Ishaantek.com](#Ishaantek.com)
-  - [Table of contents](#table-of-contents)
-  - [Self-hosting Ishaantek](#self-hosting-Ishaantek)
-  - [Libraries used](#libraries-used)
-
-## Self-hosting Ishaantek
-You can run Ishaantek.com locally on your computer.
-
-1. Download the code. In the web version of GitHub, you can do that by clicking the green "Code" button, and then "Download ZIP".
-2. Unzip it, and open it in code.
-3. Run the command `npm i` to install all the dependencies.
-4. Run the command `npm run dev` to start the website in a live server.
 
 ## Libraries used
 
