@@ -332,6 +332,7 @@ svg {
   line-height: 1.8;
   margin-top: 1px;
   color: var(--color-text);
+  text-align: center;
 }
 
 .section-text {
@@ -468,6 +469,82 @@ svg {
 
 .green-background {
   background-color: var(--color-green);
+}
+
+/* Link Preview Styles */
+.link-preview {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+}
+
+.link-preview:hover {
+  color: var(--color-blue);
+}
+
+/* Dark mode hover color */
+.dark-theme .link-preview:hover {
+  color: #a78bfa; /* Beautiful purple that works well in dark mode */
+}
+
+/* Light mode hover color - more subtle and nicer */
+.light-theme .link-preview:hover {
+  color: #2563eb; /* Better blue for light mode */
+}
+
+.link-preview-content {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 1000;
+  margin-bottom: 15px;
+  pointer-events: none;
+}
+
+.link-preview-content::before {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.link-preview:hover .link-preview-content {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(-10px);
+}
+
+/* Project item hover area - show preview when hovering over title or description */
+.project-item {
+  position: relative;
+}
+
+.project-item:hover .link-preview-content {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(-10px);
+}
+
+.link-preview-content img {
+  width: 300px;
+  height: 188px;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  border: 2px solid white;
+  object-fit: cover;
 }
 
 /* Media Queries */
